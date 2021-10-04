@@ -1,0 +1,12 @@
+---
+- name: vlans
+  hosts: juniper
+  tasks:
+    - name: create test vlans
+      junos_vlans:
+        config:
+        - name: vlan10
+          vlan_id: 10
+        - name: vlan20
+          vlan_id: 20
+        state: merged
