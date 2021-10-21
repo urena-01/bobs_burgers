@@ -1,0 +1,9 @@
+---
+- name: Configure the login banner
+  cisco.ios.ios_banner:
+    banner: login
+    text: |
+      this is my login banner
+      that states this is a test lol
+      this is a test
+    state: present
