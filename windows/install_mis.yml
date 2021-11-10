@@ -1,7 +1,5 @@
 ---
 - name: Install Apache from an MSI 
-  hosts: all 
- 
   tasks:
     - name: Download the Apache installer
       win_get_url:
