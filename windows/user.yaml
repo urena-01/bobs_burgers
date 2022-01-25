@@ -5,8 +5,8 @@
   tasks:
     - name: add user
       win_user:
-        name: bob # variable this
-        password: redhat #need to make this a variable in a vault. 
+        name: bob 
+        password: redhat  
         state: present 
 
   
