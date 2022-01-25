@@ -1,0 +1,12 @@
+---
+- name: add users to server 
+  host: windows
+  gather_facts: false
+  tasks:
+    - name: add user
+      win_user:
+        name: bob # variable this
+        password: redhat #need to make this a variable in a vault. 
+        state: present 
+
+  
