@@ -14,8 +14,4 @@
           mtu: 610
           state: active
           shutdown: enabled
-        - name: Vlan_30
-          vlan_id: 30
-          state: suspend
-          shutdown: enabled
-      state: merged
+        state: merged
