@@ -1,6 +1,6 @@
 ---
 - name: add users to server 
-  host: windows
+  hosts: windows
   gather_facts: false
   tasks:
     - name: add user
