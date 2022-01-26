@@ -1,6 +1,7 @@
 ---
 - name: vlans
   hosts: juniper
+  gather_facts: false
   tasks:
     - name: create test vlans
       junos_vlans:
