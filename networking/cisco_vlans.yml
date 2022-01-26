@@ -1,6 +1,6 @@
 ---
 - name: Merge provided configuration with device configuration
-  hosts: ios
+  hosts: cisco
   tasks:
     - ios_vlans:
       config:
