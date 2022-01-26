@@ -1,0 +1,12 @@
+name: Ansible-lint
+
+on: 'push'
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run syntax check
+      run: ansible-playbook *.yml  --syntax-check
