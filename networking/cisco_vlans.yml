@@ -2,16 +2,17 @@
 - name: Merge provided configuration with device configuration
   hosts: cisco
   tasks:
-    - ios_vlans:
-      config:
-        - name: Vlan_10
-          vlan_id: 10
-          state: active
-          shutdown: disabled
-          remote_span: 10
-        - name: Vlan_20
-          vlan_id: 20
-          mtu: 610
-          state: active
-          shutdown: enabled
-      state: merged
+    - name: create vlans
+      ios_vlans:
+        config:
+          - name: Vlan_10
+            vlan_id: 10
+            state: active
+            shutdown: disabled
+            remote_span: 10
+          - name: Vlan_20
+            vlan_id: 20
+            mtu: 610
+            state: active
+            shutdown: enabled
+        state: merged
