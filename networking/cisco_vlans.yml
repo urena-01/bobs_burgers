@@ -10,7 +10,6 @@
             vlan_id: 10
             state: active
             shutdown: disabled
-            
           - name: Vlan_20
             vlan_id: 20
             state: active
