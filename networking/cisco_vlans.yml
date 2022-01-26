@@ -1,6 +1,7 @@
 ---
 - name: Merge provided configuration with device configuration
   hosts: cisco
+  gather_facts: false
   tasks:
     - name: create vlans
       ios_vlans:
