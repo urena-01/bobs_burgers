@@ -14,4 +14,4 @@
           mtu: 610
           state: active
           shutdown: enabled
-        state: merged
+      state: merged
