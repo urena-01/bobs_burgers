@@ -5,8 +5,6 @@
   tasks:
     - name: add user
       win_user:
-        name: bob 
-        password: redhat  
-        state: present 
-
-  
+        name: "{{ user_name }}" 
+        password: "{{ user_password }}"
+        state: "{{ user_state }}"  
