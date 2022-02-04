@@ -1,6 +1,6 @@
 ---
 - name: Update all packages using Chocolatey
-  hosts: all
+  hosts: windows
   gather_facts: false
   tasks:
 
