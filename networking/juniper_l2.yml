@@ -1,0 +1,14 @@
+---
+- name: vlans
+  hosts: juniper
+  gather_facts: false
+  tasks:
+    - name: create test vlans
+      junipernetworks.junos.junos_l2_interfaces:
+        state: merged
+        config:
+          - name: desktops #interface
+            access:
+              vlan: 20 
+            enhanced: yes
+            
