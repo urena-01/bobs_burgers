@@ -4,7 +4,7 @@
   gather_facts: false
   tasks:
     - name: create vlans
-      cisco.ios.vlans:
+      cisco.ios.ios_vlans:
         state: merged
         config:
           - name: desktops
