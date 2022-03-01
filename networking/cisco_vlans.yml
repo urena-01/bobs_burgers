@@ -4,9 +4,9 @@
   gather_facts: false
   tasks:
     - name: create vlans
-      cisco.ios.ios_vlan:
-        state: present
-        aggregate:
+      cisco.ios.ios_vlans:
+        state: merged
+        config:
         - name: desktops
           vlan_id: 20
           state: active
