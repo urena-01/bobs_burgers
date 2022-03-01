@@ -4,18 +4,18 @@
   gather_facts: false
   tasks:
     - name: create vlans
-      cisco.ios.ios_vlans:
+      cisco.ios.ios_vlan:
         state: merged
         config:
-          - name: desktops
-            vlan_id: 20
-            state: active
-          - name: servers
-            vlan_id: 30
-            state: active
-          - name: printers
-            vlan_id: 40
-            state: active
-          - name: DMZ
-            vlan_id: 50
-            state: active
+        - name: desktops
+          vlan_id: 20
+          state: active
+        - name: servers
+          vlan_id: 30
+          state: active
+        - name: printers
+          vlan_id: 40
+          state: active
+        - name: DMZ
+          vlan_id: 50
+          state: active
