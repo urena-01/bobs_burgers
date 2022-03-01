@@ -4,11 +4,14 @@
   gather_facts: false
   tasks:
     - name: create vlans
-      ios_vlans:
-        config:
-        - name: Vlan_10
-          vlan_id: 10
-          state: active
-          shutdown: disabled
+      cisco.ios.vlans:
         state: merged
-        ### for some reason this play gives an error from the cisco device non ansible related
+        config:
+          - name: desktops
+            vlan_id: 20
+          - name: servers
+            vlan_id: 30
+          - name: printers
+            vlan_id: 40
+          - name: DMZ
+            vlan_id: 50
