@@ -5,7 +5,7 @@
   tasks:
     - name: create vlans
       cisco.ios.ios_vlans:
-        state: merged
+        state: parsed
         config:
         - name: desktops
           vlan_id: 20
