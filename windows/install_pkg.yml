@@ -8,3 +8,4 @@
     win_chocolatey:
       name: "{{ name }}"
       version: "{{ version }}"   
+      state: "{{ state }}"
