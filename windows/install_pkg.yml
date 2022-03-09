@@ -8,14 +8,11 @@
     win_chocolatey:
       name: "{{ name }}"
       version: "{{ version }}"
+      source: https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US
     
-  - name: Check python version
-    win_command: firefox --version
-    register: check_python_version
-
   - name: Check nodejs version
     win_command: node --version
-    register: check_node_version
+     register: check_node_version
 
   - debug:
       msg: Python Version is {{ check_python_version.stdout_lines[0] }} and NodeJS version is {{ check_node_version.stdout_lines[0] }}
