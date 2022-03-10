@@ -5,10 +5,11 @@
   tasks:
     - name: create test vlans
       junipernetworks.junos.junos_l2_interfaces:
-        state: merged
         config:
-          - name: desktops #interface
-            access:
-              vlan: 20 
-            enhanced: yes
-            
+        - name: gr-0/0/0
+          trunk:
+            allowed_vlans:
+            - DMZ
+            - desktops
+            - printers
+        state: merged
