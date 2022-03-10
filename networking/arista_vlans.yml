@@ -14,4 +14,4 @@
         - name: printers
           vlan_id: 40
         - name: DMZ
-          vlan_id: 50
+          vlan_id: 51
