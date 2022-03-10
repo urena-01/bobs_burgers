@@ -1,0 +1,9 @@
+---
+- name: Disable Print Spooler Service -brian
+  hosts: windows
+  tasks:    # in this example we are stopping the spooler service, variablize this for any service
+  - name: Disable Print Spooler Service
+    ansible.windows.win_service:
+      name: spooler
+      start_mode: disabled
+      state: stopped
