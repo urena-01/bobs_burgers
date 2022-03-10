@@ -1,0 +1,13 @@
+---
+- name: gather local admin account information
+  hosts: hosts  
+  tasks:
+    - name: Shell grab users
+      ansible.windows.win_powershell:
+        script: |
+          Get-LocalGroupMember -Group "Administrators" | Select-Object -Property Name, SID
+      register: local_admins
+
+    - name: output users
+      ansible.builtin.debug:
+        msg: "{{ local_admins | json_query('output[*].Name') }}"
