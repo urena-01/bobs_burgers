@@ -11,7 +11,7 @@
           vlan_id: 56
         - name: servers
           vlan_id: 30
-        - name: dogg
+        - name: dog
           vlan_id: 45
         - name: DMZ
           vlan_id: 51
