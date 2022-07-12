@@ -1,6 +1,6 @@
 ---
 - name: gather local admin account information
-  hosts: hosts  
+  hosts: windows  
   tasks:
     - name: Shell grab users
       ansible.windows.win_powershell:
