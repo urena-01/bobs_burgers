@@ -1,0 +1,10 @@
+---
+- name: simple playbook for adding linux users
+  hosts: all
+  tasks:
+    - name: add a user
+      user:
+        name: "{{ user_name }}"
+        state: "{{ state }}"
+        password: "{{ user_password }}"
+        
