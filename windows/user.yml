@@ -1,4 +1,7 @@
 ---
+# simple playbook to show adding users to a windows server
+# add survey for name, password, and state. 
+# for state- absent, present, query
 - name: add users to server 
   hosts: windows
   gather_facts: false
