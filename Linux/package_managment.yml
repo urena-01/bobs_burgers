@@ -1,0 +1,9 @@
+---
+- hosts: "{{ hosts }}"
+  become: yes
+  tasks:
+    - name: manage linux packages
+      ansible.builtin.package: 
+        name: "{{ pkg_name }}"
+        state: "{{ pkg_state }}"
+  
