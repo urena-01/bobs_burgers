@@ -7,5 +7,5 @@
       user:
         name: "{{ user_name }}"
         state: "{{ user_state }}"
-        password: "{{ user_password }}"
-        
+        password: "{{ user_password | password_hash('sha512'}}" 
+        update_password: on_create 
