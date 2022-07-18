@@ -1,6 +1,7 @@
 ---
 - name: simple playbook for adding linux users
   hosts: "{{ hosts }}"
+  become: yes
   tasks:
     - name: add a user
       user:
