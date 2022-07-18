@@ -1,0 +1,11 @@
+---
+- hosts: "{{ hosts }}"
+  become: yes
+  tasks:
+    - name: add user with ssh keys
+      ansible.builtin.user:
+        name: "{{ user }}"
+        state: "{{ user_state }}"
+        generate_ssh_key: yes
+        ssh_key_bits: 2048
+        ssh_key_file: .ssh/id_rsa
