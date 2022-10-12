@@ -7,7 +7,7 @@
       cisco.ios.ios_banner:
         banner: login
         text: |
-          this is my login banner
+          this is matt's login banner
           that contains a multiline
-          string
+          string, as a simple example
         state: present
