@@ -8,10 +8,10 @@
       state: merged
       config:
         - name: desktops
-          vlan_id: 56
+          vlan_id: 50
         - name: servers
-          vlan_id: 30
+          vlan_id: 31
         - name: dog
-          vlan_id: 45
+          vlan_id: 40
         - name: DMZ
-          vlan_id: 51
+          vlan_id: 52
