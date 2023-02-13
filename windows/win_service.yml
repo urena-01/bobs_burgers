@@ -1,5 +1,5 @@
 ---
-- name: Disable Print Spooler Service -brian
+- name: Disable Print Spooler Service
   hosts: windows
   tasks:    # in this example we are stopping the spooler service, variablize this for any service
   - name: Disable Print Spooler Service
