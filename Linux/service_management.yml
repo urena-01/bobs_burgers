@@ -2,8 +2,12 @@
 - hosts: "{{ hosts }}"
   become: yes
   tasks:
+    - name: Check services
+      service_facts:
+
     - name: manage linux services
       ansible.builtin.service: 
         name: "{{ svc_name }}"
         state: "{{ svc_state }}"
         enabled: "{{ svc_enabled }}"
+      when: svc_name + '.service' in services
