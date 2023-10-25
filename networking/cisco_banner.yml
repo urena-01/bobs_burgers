@@ -8,6 +8,6 @@
         banner: login
         text: |
           this is Lou's login banner
-          that contains a multiline
+          that contains a multilineuhuhuh
           string, as a simple example
         state: present
